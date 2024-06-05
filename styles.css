@@ -234,7 +234,7 @@ input[type="button"]:active{
 .id{
     position: absolute;
     top: 40%;
-    left: 50%;
+    left: 46%;
     transform: scale(1000%);
     font-weight: 800;
     z-index: -1;

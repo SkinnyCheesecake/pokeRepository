@@ -37,18 +37,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
         pokemonDataArray.forEach(data => {
             let types = data.types.map(type => type.type.name).join(', ');
 
+
+            let pokeId = data.id.toString();
+
+            if(pokeId.length === 1){
+                pokeId = "00" + pokeId;
+            } else if (pokeId.length === 2){
+                pokeId = "0" + pokeId;
+            }
+
             const newElement = document.createElement("div");
             newElement.classList.add("pokeCard");
 
             newElement.innerHTML = `
                 <div class="frontCard">
-                    <h1 class="id" id="pokeId">#${data.id}</h1>
+                    <h1 class="id" id="pokeId">#${pokeId}</h1>
                     <div class="pokeImg">
                         <img id="pokePic" src="${data.sprites.front_default}" alt="${data.name}">
                     </div>
                     <div class="pokeIdName">
                         <p class="name" id="pokeName">${data.name}</p>
-                        <p class="nameId" id="pokeNameId">#${data.id}</p>
+                        <p class="nameId" id="pokeNameId">#${pokeId}</p>
                     </div>
                 </div>
                 <div class="backCard">
