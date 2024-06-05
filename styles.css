@@ -200,6 +200,26 @@ input[type="button"]:active{
    .pokeCards{
     grid-template-columns: 1fr;
    }
+
+   .pokeCard{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+   }
+
+   .id{
+    margin-top: -5rem;
+   }
+
+   .navbar{
+    flex-direction: column;
+   }
+
+   .pokemonTypes{
+    margin: 1rem;
+    flex-wrap: nowrap;
+    overflow: scroll;
+   }
 }
 
 @media (min-width: 1500px) {
@@ -224,10 +244,11 @@ input[type="button"]:active{
     position: relative;
     overflow: hidden;
     isolation: isolate;
+    padding: 2rem;
 }
 
 .pokeCard .pokeImg img{
-    width: 20rem;
+    min-width: 16rem;
 }
 
 
